@@ -34,7 +34,7 @@ img, svg { display: block; }
   background:
     radial-gradient(circle at 68% 38%, rgba(200, 117, 62, .25), transparent 22%),
     linear-gradient(90deg, rgba(7, 9, 12, .96) 0%, rgba(7, 9, 12, .78) 40%, rgba(7, 9, 12, .18) 82%),
-    url("assets/barposte-hero.png") center right / cover no-repeat;
+    url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/barposte-hero.png") center right / cover no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -548,7 +548,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(16,17,22,.75), rgba(24,62,51,.88)),
-    url("assets/bar-setup.png") center / cover no-repeat;
+    url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/bar-setup.png") center / cover no-repeat;
 }
 
 .package-top svg { width: 26px; height: 26px; color: var(--copper); }
@@ -655,7 +655,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(16,17,22,.92), rgba(24,62,51,.9)),
-    url("assets/bar-action.png") center / cover no-repeat;
+    url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/bar-action.png") center / cover no-repeat;
   box-shadow: var(--shadow);
 }
 
@@ -707,7 +707,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(16,17,22,.94), rgba(16,17,22,.8)),
-    url("assets/cocktail-gallery.png") center / cover no-repeat;
+    url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/cocktail-gallery.png") center / cover no-repeat;
   box-shadow: var(--shadow);
 }
 
@@ -813,7 +813,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
   .site-header {
     background:
       linear-gradient(180deg, rgba(8, 10, 13, .94) 0%, rgba(8, 10, 13, .82) 48%, rgba(8, 10, 13, .5) 100%),
-      url("assets/barposte-hero.png") center / cover no-repeat;
+      url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/barposte-hero.png") center / cover no-repeat;
   }
 
   .nav-toggle {
