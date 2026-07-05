@@ -10,6 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (max-width: 620px) {
+      #servicios, #paquetes, #cocteles, #contacto, #redes { scroll-margin-top: 110px; }
+      .section { padding: 64px 0; }
+      .section-heading { margin-bottom: 24px; }
+      .section-heading h2, .experience-copy h2, .cocktails-content h2, .social-strip h2, .cta-section h2 {
+        font-size: clamp(1.72rem, 8vw, 2.25rem);
+        line-height: 1.08;
+      }
+      .eyebrow { font-size: .68rem; letter-spacing: .13em; }
+      .service-list { gap: 10px; }
+      .service-list article {
+        position: relative;
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 10px;
+        padding: 22px 76px 22px 22px;
+        min-height: auto;
+      }
+      .service-list span {
+        grid-column: auto;
+        font-size: .92rem;
+        line-height: 1;
+      }
+      .service-list h3 {
+        margin: 2px 0 8px;
+        font-size: clamp(1.18rem, 6vw, 1.45rem);
+        line-height: 1.14;
+      }
+      .service-list p {
+        max-width: 28ch;
+        font-size: .98rem;
+        line-height: 1.48;
+      }
+      .service-list a {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        width: 46px;
+        height: 46px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="inicio">
