@@ -1068,3 +1068,229 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
     font-size: 1.65rem;
   }
 }
+
+@media (max-width: 620px) {
+  body { overflow-x: hidden; }
+
+  .site-header { min-height: auto; }
+
+  .nav,
+  .nav.scrolled {
+    position: absolute;
+    top: 18px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    transform: none;
+    padding: 9px 10px;
+    background: rgba(14, 15, 20, .92);
+    border: 1px solid rgba(255,255,255,.16);
+    box-shadow: 0 16px 40px rgba(0,0,0,.28);
+    backdrop-filter: blur(14px);
+  }
+
+  .hero {
+    padding-top: 122px;
+    padding-bottom: 42px;
+  }
+
+  .hero .eyebrow {
+    max-width: 220px;
+    line-height: 1.35;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.85rem, 14vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: .98rem;
+    line-height: 1.42;
+  }
+
+  .hero-actions .btn {
+    min-height: 46px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .hero-stats div {
+    padding: 10px 8px;
+  }
+
+  .live-card {
+    width: 100%;
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    animation: none;
+    background: rgba(16,17,22,.74);
+  }
+
+  .live-card span {
+    margin-bottom: 6px;
+    font-size: .62rem;
+  }
+
+  .live-card strong {
+    font-size: 1.08rem;
+  }
+
+  .live-card p {
+    display: none;
+  }
+
+  .trust-band {
+    width: 100%;
+    margin: 0;
+    padding: 18px 14px 8px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    background: transparent;
+    box-shadow: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .trust-band div {
+    flex: 0 0 220px;
+    min-height: 74px;
+    justify-content: flex-start;
+    padding: 0 18px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    box-shadow: 0 12px 28px rgba(16,17,22,.08);
+    scroll-snap-align: start;
+  }
+
+  .experience {
+    gap: 24px;
+    padding-top: 46px;
+  }
+
+  .experience-media,
+  .experience-media img {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .premium-points {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .premium-points article {
+    flex: 0 0 248px;
+    padding: 18px;
+    scroll-snap-align: start;
+  }
+
+  .premium-points h3 {
+    font-size: 1.02rem;
+    line-height: 1.18;
+  }
+
+  .premium-points p {
+    font-size: .88rem;
+    line-height: 1.42;
+  }
+
+  .service-showcase {
+    gap: 16px;
+  }
+
+  .service-visual,
+  .service-visual img {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .service-visual div {
+    inset: auto 14px 14px;
+    padding: 16px;
+  }
+
+  .service-visual strong {
+    font-size: 1.12rem;
+  }
+
+  .service-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .service-list article {
+    flex: 0 0 82%;
+    grid-template-columns: 38px 1fr;
+    padding: 16px;
+    scroll-snap-align: start;
+  }
+
+  .service-list span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-list h3 {
+    margin-right: 34px;
+    font-size: 1rem;
+  }
+
+  .service-list p {
+    font-size: .84rem;
+    line-height: 1.38;
+  }
+
+  .service-list a {
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .whatsapp-float {
+    width: 44px;
+    height: 44px;
+    right: 12px;
+    opacity: .92;
+  }
+
+  .whatsapp-float i {
+    font-size: 1.42rem;
+  }
+
+  .experience,
+  .service-showcase,
+  .cocktails,
+  .social-strip,
+  .cta-section {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: calc(100vw - 28px);
+  }
+
+  .experience > *,
+  .service-showcase > *,
+  .cocktails > *,
+  .premium-points,
+  .service-list,
+  .trust-band {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .premium-points,
+  .service-list,
+  .trust-band {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
