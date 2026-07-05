@@ -16,6 +16,14 @@
 
 html { scroll-behavior: smooth; }
 
+#servicios,
+#paquetes,
+#cocteles,
+#contacto,
+#redes {
+  scroll-margin-top: 110px;
+}
+
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
@@ -869,6 +877,28 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
 
   .hero h1 { font-size: clamp(3.4rem, 18vw, 5.2rem); }
 
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .section-heading h2,
+  .experience-copy h2,
+  .cocktails-content h2,
+  .social-strip h2,
+  .cta-section h2 {
+    font-size: clamp(1.72rem, 8vw, 2.25rem);
+    line-height: 1.08;
+  }
+
+  .eyebrow {
+    font-size: .68rem;
+    letter-spacing: .13em;
+  }
+
   .hero-actions .btn,
   .social-icons a {
     width: 100%;
@@ -884,12 +914,44 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .service-list article {
-    grid-template-columns: 1fr 48px;
-    padding: 22px;
+  .service-list {
+    gap: 10px;
   }
 
-  .service-list span { grid-column: 1 / -1; }
+  .service-list article {
+    position: relative;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 10px;
+    padding: 22px 76px 22px 22px;
+    min-height: auto;
+  }
+
+  .service-list span {
+    grid-column: auto;
+    font-size: .92rem;
+    line-height: 1;
+  }
+
+  .service-list h3 {
+    margin: 2px 0 8px;
+    font-size: clamp(1.18rem, 6vw, 1.45rem);
+    line-height: 1.14;
+  }
+
+  .service-list p {
+    max-width: 28ch;
+    font-size: .98rem;
+    line-height: 1.48;
+  }
+
+  .service-list a {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+  }
 
   .experience-media,
   .experience-media img,
