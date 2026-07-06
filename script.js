@@ -28,11 +28,19 @@ updateNav();
 window.addEventListener("scroll", updateNav, { passive: true });
 
 let navIdleTimer;
+let keepQuickNavAwakeUntil = 0;
 
 const isMobileNav = () => window.matchMedia("(max-width: 620px)").matches;
 
-const hideQuickNav = () => {
+const startedInsideQuickNav = (event) => event.target.closest?.(".mobile-section-nav");
+
+const hideQuickNav = (event) => {
+  if (event && startedInsideQuickNav(event)) return;
   if (!isMobileNav() || !quickNav) return;
+  if (Date.now() < keepQuickNavAwakeUntil) {
+    document.body.classList.remove("nav-sleeping");
+    return;
+  }
   document.body.classList.add("nav-sleeping");
 };
 
@@ -62,6 +70,11 @@ const updateQuickActive = () => {
 
 const showQuickNavSoon = () => {
   if (!isMobileNav() || !quickNav) return;
+  if (Date.now() < keepQuickNavAwakeUntil) {
+    updateQuickActive();
+    document.body.classList.remove("nav-sleeping");
+    return;
+  }
   hideQuickNav();
   updateQuickActive();
   revealQuickNavAfter(820);
@@ -80,8 +93,13 @@ const showQuickNavSoon = () => {
 });
 
 quickLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    hideQuickNav();
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    keepQuickNavAwakeUntil = Date.now() + 1400;
+    document.body.classList.remove("nav-sleeping");
+    const target = document.querySelector(link.getAttribute("href"));
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    quickLinks.forEach((item) => item.classList.toggle("active", item === link));
     revealQuickNavAfter(520);
   });
 });

@@ -268,7 +268,7 @@
         left: 16px;
         right: 16px;
         bottom: max(12px, env(safe-area-inset-bottom));
-        z-index: 60;
+        z-index: 90;
         min-height: 46px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -317,14 +317,8 @@
         bottom: calc(max(12px, env(safe-area-inset-bottom)) + 66px);
       }
       .brand span:last-child { display: none; }
-      .nav, .nav.scrolled {
-        min-height: 54px;
-        padding: 8px 10px;
-        background: rgba(14, 15, 20, .84);
-        box-shadow: 0 8px 22px rgba(0,0,0,.16);
-      }
-      .brand-mark { width: 36px; height: 36px; }
-      .hero { padding-top: 96px; padding-bottom: 32px; }
+      .nav, .nav.scrolled { display: none; }
+      .hero { padding-top: 38px; padding-bottom: 32px; }
       .hero .eyebrow {
         margin-bottom: 10px;
         font-size: .62rem;

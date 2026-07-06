@@ -1240,17 +1240,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
 
   .nav,
   .nav.scrolled {
-    position: absolute;
-    top: 18px;
-    left: 14px;
-    right: 14px;
-    width: auto;
-    transform: none;
-    padding: 9px 10px;
-    background: rgba(14, 15, 20, .84);
-    border: 1px solid rgba(255,255,255,.16);
-    box-shadow: 0 8px 22px rgba(0,0,0,.16);
-    backdrop-filter: blur(14px);
+    display: none;
   }
 
   .nav-toggle {
@@ -1266,7 +1256,7 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
     left: 16px;
     right: 16px;
     bottom: max(8px, env(safe-area-inset-bottom));
-    z-index: 60;
+    z-index: 90;
     min-height: 46px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1320,8 +1310,8 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
   }
 
   .hero {
-    padding-top: 122px;
-    padding-bottom: 42px;
+    padding-top: 38px;
+    padding-bottom: 32px;
   }
 
   .hero .eyebrow {
@@ -1516,23 +1506,8 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
     padding-bottom: 46px;
   }
 
-  .brand span:last-child {
-    display: none;
-  }
-
-  .nav,
-  .nav.scrolled {
-    min-height: 54px;
-    padding: 8px 10px;
-  }
-
-  .brand-mark {
-    width: 36px;
-    height: 36px;
-  }
-
   .hero {
-    padding-top: 96px;
+    padding-top: 38px;
     padding-bottom: 32px;
   }
 
