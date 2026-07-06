@@ -207,6 +207,63 @@
       }
     }
   </style>
+  <style>
+    @media (max-width: 620px) {
+      .package-grid, .cocktail-grid, .process-grid {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .package-card {
+        flex: 0 0 82%;
+        min-height: 390px;
+        padding: 20px;
+        scroll-snap-align: start;
+      }
+      .package-card.featured { transform: none; }
+      .package-top {
+        min-height: 70px;
+        margin: -20px -20px 18px;
+        padding: 18px 20px;
+      }
+      .package-card h3 { font-size: 1.34rem; margin: 14px 0 8px; }
+      .package-card li { font-size: .88rem; }
+      .cocktails-media, .cocktails-media img { min-height: 260px; height: 260px; }
+      .cocktail-grid article {
+        flex: 0 0 44%;
+        min-height: 172px;
+        padding: 0;
+        overflow: hidden;
+        justify-content: flex-end;
+        scroll-snap-align: start;
+      }
+      .cocktail-grid article::before {
+        content: "";
+        display: block;
+        height: 86px;
+        margin-bottom: 12px;
+        background: linear-gradient(180deg, rgba(16,17,22,.05), rgba(16,17,22,.38)), url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/cocktail-gallery.png") center / cover no-repeat;
+      }
+      .cocktail-grid article:nth-child(2)::before { background-position: 34% center; }
+      .cocktail-grid article:nth-child(3)::before { background-position: 65% center; }
+      .cocktail-grid span, .cocktail-grid small { padding-left: 14px; padding-right: 14px; }
+      .cocktail-grid span { font-size: .9rem; line-height: 1.12; }
+      .cocktail-grid small { display: block; padding-bottom: 14px; font-size: .74rem; line-height: 1.25; }
+      .process-grid article {
+        flex: 0 0 76%;
+        padding: 20px;
+        scroll-snap-align: start;
+      }
+      .cta-section {
+        margin-bottom: 38px;
+        padding: 24px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -368,7 +425,7 @@
         <article class="package-card featured reveal">
           <div class="package-top"><i data-lucide="sparkles"></i><span>Más vendido</span></div>
           <p class="tag">Experiencia recomendada</p>
-          <h3>Signature</h3>
+          <h3>Recomendado</h3>
           <p class="price">Desde 4 horas</p>
           <ul>
             <li><i data-lucide="check"></i>Barra móvil ambientada</li>
@@ -376,12 +433,12 @@
             <li><i data-lucide="check"></i>1 cóctel de autor</li>
             <li><i data-lucide="check"></i>Cócteles sin alcohol</li>
           </ul>
-          <a class="btn card-btn strong" href="https://wa.me/51935903054?text=Hola%20BarPoste%2C%20quiero%20cotizar%20el%20paquete%20Signature%20para%20mi%20evento." target="_blank" rel="noopener">Pedir Signature</a>
+          <a class="btn card-btn strong" href="https://wa.me/51935903054?text=Hola%20BarPoste%2C%20quiero%20cotizar%20el%20paquete%20Recomendado%20para%20mi%20evento." target="_blank" rel="noopener">Pedir recomendado</a>
         </article>
         <article class="package-card reveal">
           <div class="package-top"><i data-lucide="building-2"></i><span>Empresas</span></div>
           <p class="tag">Empresas y bodas</p>
-          <h3>Executive</h3>
+          <h3>Ejecutivo</h3>
           <p class="price">Servicio premium</p>
           <ul>
             <li><i data-lucide="check"></i>Atención de alto flujo</li>
@@ -389,7 +446,7 @@
             <li><i data-lucide="check"></i>Briefing previo del evento</li>
             <li><i data-lucide="check"></i>Montaje con look corporativo</li>
           </ul>
-          <a class="btn card-btn" href="https://wa.me/51935903054?text=Hola%20BarPoste%2C%20quiero%20cotizar%20el%20paquete%20Executive." target="_blank" rel="noopener">Pedir Executive</a>
+          <a class="btn card-btn" href="https://wa.me/51935903054?text=Hola%20BarPoste%2C%20quiero%20cotizar%20el%20paquete%20Ejecutivo." target="_blank" rel="noopener">Pedir ejecutivo</a>
         </article>
       </div>
     </section>

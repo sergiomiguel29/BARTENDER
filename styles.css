@@ -1070,6 +1070,166 @@ h3 { margin: 16px 0 10px; font-size: 1.22rem; }
 }
 
 @media (max-width: 620px) {
+  .packages {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  .packages .section-heading {
+    margin-bottom: 22px;
+  }
+
+  .package-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 0 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .package-card {
+    flex: 0 0 82%;
+    min-height: 390px;
+    padding: 20px;
+    scroll-snap-align: start;
+  }
+
+  .package-card.featured {
+    transform: none;
+  }
+
+  .package-top {
+    min-height: 70px;
+    margin: -20px -20px 18px;
+    padding: 18px 20px;
+  }
+
+  .package-card h3 {
+    font-size: 1.34rem;
+    margin: 14px 0 8px;
+  }
+
+  .package-card ul {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .package-card li {
+    font-size: .88rem;
+  }
+
+  .card-btn {
+    min-height: 46px;
+    font-size: .88rem;
+  }
+
+  .cocktails {
+    gap: 22px;
+  }
+
+  .cocktails-media,
+  .cocktails-media img {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .cocktail-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cocktail-grid article {
+    flex: 0 0 44%;
+    min-height: 172px;
+    padding: 0;
+    overflow: hidden;
+    justify-content: flex-end;
+    scroll-snap-align: start;
+    background: var(--white);
+  }
+
+  .cocktail-grid article::before {
+    content: "";
+    display: block;
+    height: 86px;
+    margin-bottom: 12px;
+    background:
+      linear-gradient(180deg, rgba(16,17,22,.05), rgba(16,17,22,.38)),
+      url("https://raw.githubusercontent.com/sergiomiguel29/BARTENDER/main/assets/cocktail-gallery.png") center / cover no-repeat;
+  }
+
+  .cocktail-grid article:nth-child(2)::before { background-position: 34% center; }
+  .cocktail-grid article:nth-child(3)::before { background-position: 65% center; }
+  .cocktail-grid article:nth-child(4)::before { background-position: 72% center; }
+  .cocktail-grid article:nth-child(5)::before { background-position: 45% center; }
+  .cocktail-grid article:nth-child(6)::before { background-position: 82% center; }
+
+  .cocktail-grid span,
+  .cocktail-grid small {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .cocktail-grid span {
+    font-size: .9rem;
+    line-height: 1.12;
+  }
+
+  .cocktail-grid small {
+    display: block;
+    padding-bottom: 14px;
+    font-size: .74rem;
+    line-height: 1.25;
+  }
+
+  .process {
+    padding-top: 48px;
+  }
+
+  .process-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .process-grid article {
+    flex: 0 0 76%;
+    padding: 20px;
+    scroll-snap-align: start;
+  }
+
+  .process-grid h3 {
+    font-size: 1.08rem;
+  }
+
+  .process-grid p {
+    font-size: .88rem;
+    line-height: 1.42;
+  }
+
+  .cta-section {
+    margin-bottom: 38px;
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .cta-section p {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 620px) {
   body { overflow-x: hidden; }
 
   .site-header { min-height: auto; }
