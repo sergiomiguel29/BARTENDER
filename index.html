@@ -262,6 +262,68 @@
         margin-bottom: 38px;
         padding: 24px 20px;
       }
+      .nav-toggle, .nav-links { display: none !important; }
+      .mobile-section-nav {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        z-index: 60;
+        min-height: 56px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3px;
+        padding: 6px 7px;
+        border: 1px solid rgba(255,255,255,.14);
+        background: rgba(14, 15, 20, .88);
+        box-shadow: 0 18px 44px rgba(0,0,0,.28);
+        backdrop-filter: blur(18px);
+        transition: opacity .22s ease, transform .22s ease;
+      }
+      .mobile-section-nav a {
+        min-width: 0;
+        display: grid;
+        place-items: center;
+        gap: 3px;
+        padding: 7px 3px;
+        color: rgba(255,255,255,.66);
+        font-size: .68rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .mobile-section-nav i { font-size: 1rem; line-height: 1; }
+      .mobile-section-nav a.active {
+        color: var(--white);
+        background: rgba(200,117,62,.24);
+        box-shadow: inset 0 0 0 1px rgba(200,117,62,.18);
+      }
+      .mobile-section-nav a.active i { color: var(--copper); }
+      .services { padding-top: 26px; padding-bottom: 30px; }
+      .services .section-heading { margin-bottom: 16px; }
+      .service-showcase { gap: 8px; }
+      .service-visual, .service-visual img { min-height: 180px; height: 180px; }
+      .service-visual div { padding: 13px; }
+      .service-visual strong { font-size: 1rem; }
+      body.nav-sleeping .mobile-section-nav,
+      body.nav-sleeping .whatsapp-float {
+        opacity: 0 !important;
+        pointer-events: none;
+        transform: translateY(18px) !important;
+      }
+      .whatsapp-float {
+        width: 42px;
+        height: 42px;
+        right: 14px;
+        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 66px);
+      }
+      .packages { padding-top: 42px; padding-bottom: 46px; }
+      .packages .section-heading {
+        width: 100%;
+        margin: 0 auto 18px;
+        text-align: center;
+      }
+      .packages .eyebrow { margin-left: auto; margin-right: auto; }
+      .package-grid { padding-left: 2px; padding-right: 2px; }
     }
   </style>
 </head>
@@ -509,6 +571,14 @@
   <a class="whatsapp-float" href="https://wa.me/51935903054?text=Hola%20BarPoste%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20evento." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <nav class="mobile-section-nav" aria-label="Navegación rápida">
+    <a href="#inicio" data-section="inicio" class="active"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+    <a href="#servicios" data-section="servicios"><i class="fa-solid fa-martini-glass-citrus"></i><span>Servicios</span></a>
+    <a href="#paquetes" data-section="paquetes"><i class="fa-solid fa-layer-group"></i><span>Planes</span></a>
+    <a href="#cocteles" data-section="cocteles"><i class="fa-solid fa-wine-glass"></i><span>Carta</span></a>
+    <a href="#contacto" data-section="contacto"><i class="fa-brands fa-whatsapp"></i><span>Reserva</span></a>
+  </nav>
 
   <footer class="footer">
     <span>BarPoste</span>
